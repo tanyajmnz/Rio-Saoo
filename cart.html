@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio Sao (サンリオ) | Cart </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="POCHACCOlowgo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family:Plus Jakarta Sans, display;
+            background-image: url('background.svg');
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10%; 
+        }
+        .navbar {
+        background-color: #FFD5E7;
+        }
+        .card {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px pink;
+            transition: all 0.3s ease;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 300px;
+            padding-bottom: 50px;
+        }
+        .card-img-top {
+            object-fit: cover;
+            height: 200px; 
+            width: 100%; 
+        }
+        .container {
+            margin-top:30px;
+        }
+
+        body {
+            background-color: white;
+            cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAtFL/AP///wAw8rsAnjzoAPf3xgAavY8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEZmZmZmQAAAAAAAAAAAABETMzMzMxEQAAAAAAAAAAEREzMwMzMREQAAAAAAAAABETMzAwMzMREAAAAAAAAAARMzMDMwMzMRAAAAAAAAAAM2ZmYzNmZmMwAAAAAAAAADYiIiY2IiImMAAAAAAAAAACIiIlBSIiIgAAAAAAAAAAAiIAAgIAAiIAAAAAAAAAAAIiAAICAAIiAAAAAAAAAAACIgACAgACIgAAAAAAAAAAAiIiIgIiIiIAAAAAAAAAAAAiIiAAIiIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAAAAAAAzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////////////////////////////////////////////////////8AH//8AAf/+AAD//AAAf/wAAH/8AAB//AAAf/wAAH/+AAD//gAA//4AAP/+AAD//gAA//8BAf//g4P//////8/////H////w////8H////B////w=='), auto;
+        }
+        .nav-link {
+        color:black;
+        }
+        .nav-link.active {
+          background-color:#58CDEC;
+        }
+        .navbar-toggler {
+            border-color:black;
+        }
+        .btn {
+            border-radius: 2rem;
+            background-color:#f98eaa;
+            color:white;
+            opacity:0.5;
+            transition: all 0.3s ease;
+            margin:5px;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            opacity:1;
+        }
+        input[type=text] {
+            border:2px solid #CAC5ED;
+            border-radius:1rem;
+        }
+        .card {
+            transition:all 0.3s ease;
+        }
+        .card:hover{
+            transform:scale(1.13);
+        }
+        #magnif {
+            width:10%;
+        }
+        #searchting {
+            width:10%;
+        }
+        #searchtingy {
+            width:50%;
+        }
+        #koyangi {
+            width:90%;
+        }
+        h3:hover {
+            text-decoration: underline;
+        }
+        .add2cart {
+            width:20%;
+        }
+        .glow {
+            box-shadow: 0px 0px 20px #514283 !important;
+            border-color: #514283 !important;
+        }
+        .categs {
+            margin-top: 50px;
+            font-weight: bold;
+        }
+        #urcart {
+            background-color:#FFD5E7;
+            padding:20px;
+            border-radius: 5rem;
+        }
+        #desc {
+            background-color:#A3E1F6;
+            padding:20px;
+            border-radius: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar sticky-md-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid sticky-top">
+        <a class="navbar-brand" href="#"><img src="SANRIO_LOGO-removebg-preview.png" alt="sanrio logo" width="120"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="SANRIO-ATC.html">About the Company</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="SANRIO-HE.html">Home Essentials</a></li>
+                    <li><a class="dropdown-item" href="SANRIO-Plush&Toys.html">Plush & Toys</a></li>
+                    <li><a class="dropdown-item" href="SANRIO-Jewelry.html">Jewelry</a></li>
+                    <li><a class="dropdown-item" href="SANRIO-Tech.html">Tech Accessories</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="cart.html">Cart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      
+
+      <div class="container">
+        <h1 id="urcart"> Your Cart</h1>
+        <h4 id="desc"> 🎀 Buy the items you've been eyeing from our store! </h4>
+        <h2 class="categs">Home Essentials</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/840298932320-22_800x.png?v=1714167468" alt="Kuromi Silhouette Neon Light Lamp" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Kuromi Silhouette Neon Light Lamp</h3>
+                        <h5>₱1149.99</h5>
+                        <button class="btn" onclick="addToCart('Kuromi Silhouette Neon Light Lamp', '₱1149.99')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/HelloKitty_ImpressionsVanity_JorgeMeza-494_fa7471b1-351a-4ce5-b6a1-ef86574c01b5_800x.jpg?v=1711659858" alt="Hello Kitty x Impressions Vanity Pocket Mirror with Ring Stand" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty x Impressions Vanity Pocket Mirror with Ring Stand</h3>
+                        <h5>₱2250.50</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty x Impressions Vanity Pocket Mirror with Ring Stand', '₱2250.50')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/4973307628726-8_800x.png?v=1710350529" alt="My Melody & Kuromi Cubic Storage Containers (Set of 2)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>My Melody & Kuromi Cubic Storage Containers (Set of 2)</h3>
+                        <h5>₱750</h5>
+                        <button class="btn" onclick="addToCart('My Melody & Kuromi Cubic Storage Containers (Set of 2)', '₱750')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/81u7tuTt7rL._AC_SL1500_800x.jpg?v=1710871630" alt="Hello Kitty Classic Pet Bolster Bed (Small)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty Classic Pet Bolster Bed (Small)</h3>
+                        <h5>₱2038.83</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty Classic Pet Bolster Bed (Small)', '₱2038.83')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/969311-Zoom.1_800x.jpg?v=1708037586" alt="Chococat Checkered Ceramic Mug" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Chococat Checkered Ceramic Mug</h3>
+                        <h5>₱582.11</h5>
+                        <button class="btn" onclick="addToCart('Chococat Checkered Ceramic Mug', '₱582.11')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/81NzU2gHHsL._AC_SX679_800x.jpg?v=1710871378" alt="Hello Kitty Pet Rope Toy (Strawberry and Bows)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty Pet Rope Toy (Strawberry and Bows)</h3>
+                        <h5>₱756.91</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty Pet Rope Toy (Strawberry and Bows)', '₱756.91')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="categs">Plush & Toys</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/4972825222737_1200x.jpg?v=1706922073" alt="Hello Kitty Nanoblock Character Collection Series (Version 2)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty Nanoblock Character Collection Series (Version 2)</h3>
+                        <h5>₱699.23</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty Nanoblock Character Collection Series (Version 2)', '₱699.23')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/970409-Zoom.1_1200x.jpg?v=1708732804" alt="Cinnamoroll 12” Plush (Super Pink Series)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Cinnamoroll 12” Plush (Super Pink Series)</h3>
+                        <h5>₱1164.80</h5>
+                        <button class="btn" onclick="addToCart('Cinnamoroll 12” Plush (Super Pink Series)', '₱1164.80')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/products/618861-Zoom.1_1200x.jpg?v=1664384434" alt="Badtz-maru 10” Plush (Classic Series)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Badtz-maru 10" Plush (Classic Series)</h3>
+                        <h5>₱1864.61</h5>
+                        <button class="btn" onclick="addToCart('Badtz-maru 10” Plush (Classic Series)', '₱1864.61')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/957291-Zoom.1_1200x.jpg?v=1709676143" alt="Kuromi 7” Plush (Sweet Dreams Series)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Kuromi 7" Plush (Sweet Dreams Series)</h3>
+                        <h5>₱1398.46</h5>
+                        <button class="btn" onclick="addToCart('Kuromi 7” Plush (Sweet Dreams Series)', '₱1398.46')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/939421-Zoom.1_1200x.jpg?v=1707512480" alt="Chococat Face Plush (Purple Wave Series)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Chococat Face Plush (Purple Wave Series)</h3>
+                        <h5>₱2796.91</h5>
+                        <button class="btn" onclick="addToCart('Chococat Face Plush (Purple Wave Series)', '₱2796.91')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/7828-TY-685_dfd56bd6-c7fa-4015-8760-3dc00c8555e1_1200x.jpg?v=1698271276" alt="Gudetama 2-in-1 Reversible Plush" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Gudetama 2-in-1 Reversible Plush</h3>
+                        <h5>₱1048.84</h5>
+                        <button class="btn" onclick="addToCart('Gudetama 2-in-1 Reversible Plush', '₱1048.84')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="categs">Tech Accessories</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/HK_50th_AirPod_pro_-_1_1200x.jpg?v=1714518216" alt="Hello Kitty 50th Anniversary AirPods Case" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty 50th Anniversary AirPods Case</h3>
+                        <h5>₱1164.80</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty 50th Anniversary AirPods Case', '₱1164.80')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/RC-VR-1093_1_816fccbe-4e01-4409-812e-59c1aa450b4e_1200x.webp?v=1708546658" alt="Hello Kitty Strawberry Planet 35mm Camera" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty Strawberry Planet 35mm Camera</h3>
+                        <h5>₱3437.87</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty Strawberry Planet 35mm Camera', '₱3437.87')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/Cinnamoroll-01_d85193ba-732e-4110-a139-772008fd59b2_1200x.jpg?v=1703805691" alt="Cinnamoroll Beaded Charm Mobile Phone Wrist Strap" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Cinnamoroll Beaded Charm Mobile Phone Wrist Strap</h3>
+                        <h5>₱873.45</h5>
+                        <button class="btn" onclick="addToCart('Cinnamoroll Beaded Charm Mobile Phone Wrist Strap', '₱873.45')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/Keroppi_AirTagKeychain_Front_SALES_1200x.jpg?v=1708122117" alt="Keroppi x Sonix AirTag Keychain" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Keroppi x Sonix AirTag Keychain</h3>
+                        <h5>₱1165.38</h5>
+                        <button class="btn" onclick="addToCart('Keroppi x Sonix AirTag Keychain', '₱1165.38')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.shopify.com/s/files/1/0416/8083/0620/files/Littletwinstar-01_1bc36c7b-15e7-4572-8606-09a049456a61_600x.jpg?v=1701369352" alt="LittleTwinStars Beaded Charm Mobile Phone Wrist Strap" class="card-img-top">
+                    <div class="card-body">
+                         <h3>LittleTwinStars Beaded Charm Mobile Phone Wrist Strap</h3>
+                        <h5>₱873.45</h5>
+                        <button class="btn" onclick="addToCart('LittleTwinStars Beaded Charm Mobile Phone Wrist Strap', '₱873.45')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.shopify.com/s/files/1/0416/8083/0620/files/Sanrio_AirPods_Gu_06_large.jpg?v=1703697607" alt="Gudetama AirPods 1st & 2nd Case" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Gudetama AirPods 1st & 2nd Case</h3>
+                        <h5>₱1164.80</h5>
+                        <button class="btn" onclick="addToCart('Gudetama AirPods 1st & 2nd Case', '₱1164.80')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="categs">Jewelry</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/mvmt209.2_frLarge_1200x.jpg?v=1712259395" alt="Hello Kitty x MVMT 50th Anniversary Charm Bracelet Watch" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty x MVMT 50th Anniversary Charm Bracelet Watch</h3>
+                        <h5>₱16198.78</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty x MVMT 50th Anniversary Charm Bracelet Watch', '₱16198.78')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/28500358_fr_1200x.jpg?v=1697652730" alt="Hello Kitty x MVMT Coronada Watch (Petal Blush)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty x MVMT Coronada Watch (Petal Blush)</h3>
+                        <h5>₱17364.16</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty x MVMT Coronada Watch (Petal Blush)', '₱17364.16')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/28500359_fr_1200x.jpg?v=1697652635" alt="Hello Kitty x MVMT Coronada Watch (Gloss Black)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty x MVMT Coronada Watch (Gloss Black)</h3>
+                        <h5>₱16781.47</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty x MVMT Coronada Watch (Gloss Black)', '₱16781.47')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/R400031YLCL-7_1200x.jpg?v=1698781604" alt="Hello Kitty 14K Yellow Gold Pavé Diamond Ring (Size 7 Only)" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty 14K Yellow Gold Pavé Diamond Ring (Size 7 Only)</h3>
+                        <h5>₱33796.02</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty 14K Yellow Gold Pavé Diamond Ring (Size 7 Only)', '₱33796.02')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/N400383TLCL-18_1200x.jpg?v=1698781402" alt="Hello Kitty 10K Yellow Gold Mini Link Necklace" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty 10K Yellow Gold Mini Link Necklace</h3>
+                        <h5>₱26803.74</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty 10K Yellow Gold Mini Link Necklace', '₱26803.74')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.sanrio.com/cdn/shop/files/N400384UDIL-18_1200x.jpg?v=1698781299" alt="Hello Kitty 14K White Gold Diamond Bracelet" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Hello Kitty 14K White Gold Diamond Bracelet</h3>
+                        <h5>₱22433.57</h5>
+                        <button class="btn" onclick="addToCart('Hello Kitty 14K White Gold Diamond Bracelet', '₱22433.57')"><img src="add2crt.png" alt="add2cart image"  class="add2cart"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card m-3">
+            <div class="form-container">
+                <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="GET" onsubmit="return prepareCartItems()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="categs">Details:</h2>
+                            <div class="mb-2">
+                                <label for="cust_name">Your Name</label>
+                                <input type="text" name="cust_name" id="cust_name" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="mb-2">
+                                <label for="cust_addr">Your Address</label>
+                                <input type="text" name="cust_addr" id="cust_addr" class="form-control" placeholder="Address">
+                            </div>
+                            <div class="mb-2">
+                                <label for="cust_email">Your Email</label>
+                                <input type="text" name="cust_email" id="cust_email" class="form-control" placeholder="Email">
+                            </div>
+                            <input type="hidden" name="cust_order" id="cust_order">
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="categs">Cart <br>Total: ₱<span id="prod_price">0.00</span></h2>
+                            <ul id="itemz" class="list-group"></ul>
+                            <input type="submit" class="btn mt-3" onclick="cashier()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let itemz = [];
+        
+        function showSearchTip() {
+            alert("Tip: Just use ctrl + f");
+        }
+
+        function addItem(prod_name, prod_price) {
+            var cust_order = {prod_name: prod_name, prod_price: parseFloat(prod_price.replace("₱", "")) };
+            itemz.push(cust_order);
+            renderCartItem(cust_order);
+            updateTotalCost(); 
+        }
+        
+        function renderCartItem(cust_order) {
+            var li = document.createElement("li");
+            li.classList.add("list-group-item");
+        
+            var itemDetails = document.createElement("span");
+            itemDetails.textContent = cust_order.prod_name + " - ₱" + cust_order.prod_price.toFixed(2);
+        
+            var removeButton = document.createElement("button");
+            removeButton.textContent = "Remove";
+            removeButton.classList.add("btn", "btn-danger", "btn-sm", "float-end");
+            removeButton.onclick = function() {
+                removeItem(li, cust_order);
+            };
+        
+            li.appendChild(itemDetails);
+            li.appendChild(removeButton);
+        
+            document.getElementById("itemz").appendChild(li);
+        }
+        
+        function removeItem(itemElement, cust_order) {
+            itemElement.remove();
+            const index = itemz.findIndex(i => i.prod_name === cust_order.prod_name && i.prod_price === cust_order.prod_price);
+            if (index > -1) {
+            itemz.splice(index, 1);
+            }
+            updateTotalCost();
+        }
+        
+        function updateTotalCost() {
+            var prod_priceElement = document.getElementById("prod_price");
+            var total = itemz.reduce((sum, cust_order) => sum + cust_order.prod_price, 0);
+            prod_priceElement.textContent = total.toFixed(2);
+        }
+        
+        function addToCart(prod_name, prod_price) {
+            addItem(prod_name, prod_price);
+        }
+        
+        function prepareCartItems() {
+            document.getElementById("cart_items").value = JSON.stringify(itemz);
+        }
+
+        function cashier() { 
+            var inputItems = document.getElementById('cust_order');
+            var theItems = updateTotal();
+            inputItems.value = JSON.stringify(theItems);
+            document.querySelector("form").submit();
+        }
+
+        function updateTotal() {
+            var myArray = [];
+            for (var i = 0; i < itemz.length; i++) {
+                myArray.push({ prod_name: itemz[i].prod_name, prod_price: parseFloat(itemz[i].prod_price.toFixed(2)) });
+            }
+            return myArray;
+         }
+
+         function searchProducts() {
+            var searchthings = document.getElementById("searchthings").value.toLowerCase();
+            var productCards = document.querySelectorAll(".product-card");
+
+            productCards.forEach(card => {
+                var productName = card.querySelector("h3").textContent.toLowerCase();
+                if (productName.includes(searchthings)) {
+                    card.classList.add("glow");
+                } else {
+                    card.classList.remove("glow");
+                }
+            });
+            return false;
+        }
+        </script>
+
+</body>
+</html> 
